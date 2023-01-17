@@ -1,0 +1,46 @@
+header {
+  padding: 15px 40px;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+}
+
+.app-logo {
+  font-size: 24px;
+  color: rgba(109, 89, 57, 0.883);
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+}
+
+.app-logo:hover {
+  opacity: 0.8;
+  color: rgba(109, 89, 57, 0.883);
+}
+
+.menu-item {
+  text-align: center;
+  width: 85px;
+}
+.menu-item:hover{
+  opacity: 0.8;
+}
+.icon-size {
+  font-size: 24px;
+}
+
+.icon-color {
+  color: rgba(109, 89, 57, 0.883);
+}
+
+.menu-item-text {
+  font-size: 12px;
+  color: #53483d99;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+footer {
+  background-color: #4e4031;
+  color: #f3f3f3;
+  position: sticky;
+  top: 100vh;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
