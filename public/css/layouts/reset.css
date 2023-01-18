@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f3f3f3;
+  background-color: #d6d5d5;
   min-height: 100vh;
 }
 
@@ -19,4 +19,7 @@ p {
 a {
   text-decoration: none;
   color: black;
+}
+li{
+  list-style: none;
 }

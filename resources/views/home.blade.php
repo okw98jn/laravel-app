@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="button018">
-        <a href="/"><span>はじめる</span></a>
+        <a href="{{ route('user.login') }}"><span>はじめる</span></a>
     </div>
 </div>
 @endsection

@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name')->comment('名前');
             $table->string('email')->unique()->comment('メールアドレス');
             $table->string('password')->comment('パスワード');
-            $table->string('image')->comment('プロフィール画像');
-            $table->text('introduction')->comment('自己紹介');
+            $table->string('image')->nullable()->comment('プロフィール画像');
+            $table->text('introduction')->nullable()->comment('自己紹介');
             $table->timestamps();
         });
     }

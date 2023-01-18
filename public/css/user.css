@@ -1,0 +1,51 @@
+.form-title {
+    color: #593310;
+    font-size: 32px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-family: "Kosugi Maru", sans-serif;
+}
+
+.form-sub-title {
+    font-size: 16px;
+    color: #593310;
+    letter-spacing: 6px;
+}
+
+.input-field {
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(89, 51, 16, 0.725);
+    color: white;
+    text-align: center;
+    width: 50%;
+    font-weight: 300;
+    outline: 0;
+    transition-duration: 0.4s;
+}
+
+.input-field:focus {
+    background-color: white;
+    width: 55%;
+    color: rgba(89, 51, 16, 0.875);
+}
+
+.input-field::placeholder {
+    color: white;
+}
+
+.form-btn {
+    width: 25%;
+    padding: 12px 16px;
+    border: 2px solid rgba(89, 51, 16, 0.725);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgba(89, 51, 16, 0.725);
+}
+
+.form-btn:hover {
+    transition: all 0.4s;
+    background-color: rgba(89, 51, 16, 0.725);
+    color: white;
+}
