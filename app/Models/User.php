@@ -92,4 +92,10 @@ class User extends Authenticatable
         $user = $this->getUser(Auth::id());
         $user->delete();
     }
+
+    // リレーション
+    public function user()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

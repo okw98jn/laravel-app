@@ -15,7 +15,7 @@
             <a href="#">フォロワー</a>
         </div>
         <div class="user-link-btn mb-3">
-            <a href="#">作成</a>
+            <a href="{{ route('post.create') }}">作成</a>
             @if ($user->id === Auth::id())
                 <a href="{{ route('user.edit', Auth::id())}}">編集</a>
             @endif

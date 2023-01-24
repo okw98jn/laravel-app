@@ -23,6 +23,7 @@
     <link href="{{ asset('css/layouts/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/layouts/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/post.css') }}" rel="stylesheet">
 </head>
 <body>
     @include('layouts.header')

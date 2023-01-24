@@ -26,6 +26,7 @@ Route::group(['middleware' => ['guest']], function() {
 });
 
 Route::group(['middleware' => ['auth']],function () {
+    // ユーザー関連
     Route::namespace('User')->prefix('user')->name('user.')->group(function () {
         Route::get('/index', [App\Http\Controllers\User\UserController::class, 'index'])->name('index');
         Route::get('/show/{id}', [App\Http\Controllers\User\UserController::class, 'show'])->name('show');
@@ -38,6 +39,12 @@ Route::group(['middleware' => ['auth']],function () {
             Route::get('/destroy_confirm/{id}', [App\Http\Controllers\User\UserController::class, 'destroy_confirm'])->name('destroy_confirm');
         });
     });
+    // 投稿関連
+    Route::namespace('Post')->prefix('post')->name('post.')->group(function () {
+        Route::get('/create', [App\Http\Controllers\Post\PostController::class, 'create'])->name('create');
+        Route::post('/store', [App\Http\Controllers\Post\PostController::class, 'store'])->name('store');
+    });
+    
 });
 
 

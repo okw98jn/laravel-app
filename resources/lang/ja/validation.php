@@ -149,7 +149,9 @@ return [
         'name' => '名前',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
-        'confirm_password' => 'パスワード確認'
+        'confirm_password' => 'パスワード確認',
+        'title' => '料理名',
+        'image' => '画像'
     ],
         
 ];

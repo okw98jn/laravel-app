@@ -1,0 +1,70 @@
+.notification-title {
+    color: #593309;
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #c2b6aa;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.post-field {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.post-field label {
+    display: block;
+    font-size: 18px;
+    text-align: left;
+    color: #484848;
+}
+
+.required::after {
+    color: white;
+    font-size: 11px;
+    background-color: red;
+    border-radius: 12px;
+    padding: 0px 6px;
+    margin-left: 6px;
+    opacity: 0.8;
+    content: "必須";
+}
+
+.post-field input, textarea {
+    width: 100%;
+    margin: 5px 0;
+    border: 2px solid rgba(126, 126, 126, 0.421);
+    opacity: 0.8;
+    padding: 8px 10px;
+    font-size: 18px;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.time-field {
+    text-align: left;
+}
+
+.time-field select {
+    border-radius: 50px;
+    outline: 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 7px 10px;
+    border: 2px solid #7b6047;
+    color: #56514d;
+}
+
+.post-btn {
+    width: 30%;
+    padding: 15px 30px;
+    color: white;
+    background-color: #896e55;
+    border: none;
+    border-radius: 30px;
+}
+
+.post-btn:hover {
+    opacity: 0.8;
+}
