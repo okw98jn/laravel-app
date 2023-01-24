@@ -27,8 +27,17 @@ Route::group(['middleware' => ['guest']], function() {
 
 Route::group(['middleware' => ['auth']],function () {
     Route::namespace('User')->prefix('user')->name('user.')->group(function () {
+        Route::get('/index', [App\Http\Controllers\User\UserController::class, 'index'])->name('index');
         Route::get('/show/{id}', [App\Http\Controllers\User\UserController::class, 'show'])->name('show');
+        Route::post('/update', [App\Http\Controllers\User\UserController::class, 'update'])->name('update');
+        Route::post('/destroy', [App\Http\Controllers\User\UserController::class, 'destroy'])->name('destroy');
         Route::get('/logout', [App\Http\Controllers\User\Auth\LoginController::class, 'logout'])->name('logout');
+        // 他のユーザーを操作出来ないように
+        Route::group(['middleware' => ['usercheck']], function () {
+            Route::get('/edit/{id}', [App\Http\Controllers\User\UserController::class, 'edit'])->name('edit');
+            Route::get('/destroy_confirm/{id}', [App\Http\Controllers\User\UserController::class, 'destroy_confirm'])->name('destroy_confirm');
+        });
     });
 });
+
 

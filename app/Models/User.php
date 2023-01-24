@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -46,7 +46,7 @@ class User extends Authenticatable
     ];
 
     // ユーザー登録
-    public function CreateUser($request)
+    public function createUser($request)
     {
         $user = $this->create([
             'name' => $request->name,
@@ -54,5 +54,42 @@ class User extends Authenticatable
             'password' => Hash::make($request->password)
         ]);
         return $user;
+    }
+
+    // ユーザー取得
+    public function getUser($id)
+    {
+        $user = $this->find($id);
+        return $user;
+    }
+
+    // 全ユーザーを取得
+    public function getUsers()
+    {
+        $users = $this->paginate(10);
+        return $users;
+    }
+
+    // ユーザー更新
+    public function updateUser($request)
+    {
+        $user = $this->find(Auth::id());
+        // 画像がアップロードされた場合
+        if($request->image) {
+            $file_name = $request->file('image')->getClientOriginalName();
+            $path = $request->file('image')->storeAs('', $file_name, 'public');
+            $user->image = $path;
+        }
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->introduction = $request->introduction;
+        $user->save();
+    }
+
+    // ユーザー削除
+    public function destroyUser()
+    {
+        $user = $this->getUser(Auth::id());
+        $user->delete();
     }
 }

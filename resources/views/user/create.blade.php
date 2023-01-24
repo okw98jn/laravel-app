@@ -14,7 +14,7 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <input type="text" placeholder="メールアドレス" name='email' class="input-field" value="{{ old('email') }}">
+                <input type="email" placeholder="メールアドレス" name='email' class="input-field" value="{{ old('email') }}">
                 @error('email')
                     <li class="text-danger">{{$message}}</li>
                 @enderror

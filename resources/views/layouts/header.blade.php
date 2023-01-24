@@ -26,6 +26,18 @@
 			@endguest
 			@auth
 				<div class="menu-item">
+					<a href="{{ route('user.index') }}">
+						<i class="fa-solid fa-users icon-size icon-color"></i>
+						<p class="menu-item-text">ユーザー</p>
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="{{ route('user.show', Auth::id()) }}">
+						<i class="fa-solid fa-user icon-size icon-color"></i>
+						<p class="menu-item-text">マイページ</p>
+					</a>
+				</div>
+				<div class="menu-item">
 					<a href="{{ route('user.logout') }}">
 						<i class="fa-solid fa-person-walking-arrow-right icon-size icon-color"></i>
 						<p class="menu-item-text">ログアウト</p>
